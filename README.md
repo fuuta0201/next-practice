@@ -1,6 +1,7 @@
 # Next.js練習用リポジトリ
 
-自身のポートフォリオサイト(Astro.js)をNext.jsで作り直す
+- 自身のポートフォリオサイト(Astro.js)をNext.jsで作り直す
+- TypeScript,TailwindCSSの練習
 
 ## Getting Started
 
