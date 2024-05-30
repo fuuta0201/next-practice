@@ -1,14 +1,12 @@
 import React from 'react'
-import Link from 'next/link'
-import Image from 'next/image'
 import SectionTitle from '../common/SectionTitle'
 import WorkCard from './WorkCard'
 
 const Works = () => {
   return (
-    <div className='px-[50px] mb-72'>
+    <div className='px-[50px] mb-72 flex flex-col items-center'>
       <SectionTitle title={"Works"} />
-      <div className='w-full bg-gray-100 rounded-md shadow-md px-16 py-[100px]'>
+      <div className='w-full max-w-[1280px] bg-gray-100 rounded-md shadow-md px-16 py-[100px]'>
         <ul className='flex gap-x-12 flex-wrap'>
           <WorkCard 
             url="https://freestyle-yanagiya.jp/"
