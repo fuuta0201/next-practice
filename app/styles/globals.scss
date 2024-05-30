@@ -95,3 +95,19 @@ button {
     }
   }
 }
+
+.c-image {
+  figure {
+    overflow: hidden;
+  }
+  img {
+    transition: all 1s ease;
+  }
+  @media (hover) {
+    &:hover {
+      img {
+        transform: scale(1.2, 1.2);
+      }
+    }
+  }
+}
