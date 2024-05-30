@@ -5,7 +5,7 @@ import Skills from "./components/features/Skills";
 
 export default function Home() {
   return (
-    <main className="pt-[60px]">
+    <main className="pt-[60px] relative">
       <Hero />
       <div id="about" className="pt-[100px] mt-[-100px]"></div>
       <About />
