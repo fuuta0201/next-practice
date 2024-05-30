@@ -1,0 +1,97 @@
+@use './foundations/mixins.scss' as *;
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+	--height-header-pc: .6rem;
+	--height-header-sp: .50rem;
+}
+body {
+  color: #000;
+  letter-spacing: .04em;
+  word-wrap : break-word;
+  overflow-wrap : break-word;
+  -webkit-text-size-adjust: 100%;
+     -moz-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+       -o-text-size-adjust: 100%;
+          text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  background-color: #fff;
+  position: relative;
+  @include pc {
+    font-size: 16px;
+  }
+  @include sp {
+    font-size: 14px;
+  }
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+  -webkit-transition: opacity .3s;
+          transition: opacity .3s;
+}
+button {
+  padding: 0;
+  border: none;
+  cursor: pointer;
+}
+@include pc {
+  a:hover {
+    opacity: .6;
+  }
+}
+
+//-----------------------------------
+.u-pc {
+  @include sp {
+    display: none !important;
+  }
+}
+.u-sp {
+  @include pc {
+    display: none !important;
+  }
+}
+
+.l-container {
+  @include pc {
+    width: 100%;
+    margin: 0 auto;
+  }
+  @include sp {
+    padding: 0 24px;
+  }
+}
+
+.l-main {
+  @include pc {
+    width: 100%;
+    padding-top: rem(60px);
+  }
+  @include sp {
+    width: 100%;
+    padding-top: rem(50px);
+  }
+}
+
+.c-text-link {
+  background: linear-gradient(currentColor, currentColor) 0 100%/0 1px no-repeat;
+  transition: background .5s ease;
+  will-change: transition;
+  line-height: 1.5;
+  @media (hover) {
+    &:hover {
+      background-size: 100% 1px;
+    }
+    button:hover &,
+    a:hover & {
+      background-size: 100% 1px;
+    }
+  }
+}
