@@ -1,9 +1,9 @@
-import Image from "next/image";
+import Hero from "./components/features/Hero";
 
 export default function Home() {
   return (
-    <main className="h-5">
-      これはpage.tsxです
+    <main className="pt-[60px]">
+      <Hero />
     </main>
   );
 }
