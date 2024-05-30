@@ -4,6 +4,7 @@ import "./styles/reset.css";
 import "./styles/globals.css";
 import "./styles/globals.scss";
 import Header from "./components/layouts/Header";
+import Footer from "./components/layouts/Footer";
 
 const notoSansJP = Noto_Sans_JP({ subsets: ["latin"], weight: ["300","400","500","700"] });
 
@@ -22,6 +23,7 @@ export default function RootLayout({
       <body className={notoSansJP.className}>
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );
