@@ -2,6 +2,7 @@
 import React from 'react'
 import Image from 'next/image'
 import SectionTitle from '../common/SectionTitle'
+import SkillCard from './SkillCard'
 
 const Skills = () => {
 
@@ -25,53 +26,11 @@ const Skills = () => {
       <p className='mb-12 text-center'>実務や研究、個人開発で使用した経験のあるスキルを習熟度と共に掲載しています。</p>
       <div className='w-[1080px] py-16 mb-20'>
         <h3 className='text-3xl font-bold mb-10'>Front End</h3>
-        <div className='w-full flex flex-wrap gap-7'>
-          {front.map((item, index) => (
-            <div className='w-72 h-20 flex flex-col items-center justify-center gap-y-2 rounded-md c-skill-box' key={index}>
-              <p className='text-xl font-bold'>{item.name}</p>
-              <div className='flex'>
-                {Array.from({ length: item.star }).map((_, starIndex) => (
-                  <Image src={'/images/icons/star-black.svg'} alt='' width={16} height={16} key={starIndex}></Image>
-                ))}
-                {Array.from({ length: 5 - item.star }).map((_, starIndex) => (
-                  <Image src={'/images/icons/star-grey.svg'} alt='' width={16} height={16} key={starIndex}></Image>
-                ))}
-              </div>
-            </div>
-          ))}
-        </div>
+        <SkillCard skills={front} />
         <h3 className='text-3xl font-bold mb-10 pt-20'>Back End</h3>
-        <div className='w-full flex flex-wrap gap-7'>
-          {back.map((item, index) => (
-            <div className='w-72 h-20 flex flex-col items-center justify-center gap-y-2 rounded-md c-skill-box' key={index}>
-              <p className='text-xl font-bold'>{item.name}</p>
-              <div className='flex'>
-                {Array.from({ length: item.star }).map((_, starIndex) => (
-                  <Image src={'/images/icons/star-black.svg'} alt='' width={16} height={16} key={starIndex}></Image>
-                ))}
-                {Array.from({ length: 5 - item.star }).map((_, starIndex) => (
-                  <Image src={'/images/icons/star-grey.svg'} alt='' width={16} height={16} key={starIndex}></Image>
-                ))}
-              </div>
-            </div>
-          ))}
-        </div>
+        <SkillCard skills={back} />
         <h3 className='text-3xl font-bold mb-10 pt-20'>Deveropment</h3>
-        <div className='w-full flex flex-wrap gap-7'>
-          {dev.map((item, index) => (
-            <div className='w-72 h-20 flex flex-col items-center justify-center gap-y-2 rounded-md c-skill-box' key={index}>
-              <p className='text-xl font-bold'>{item.name}</p>
-              <div className='flex'>
-                {Array.from({ length: item.star }).map((_, starIndex) => (
-                  <Image src={'/images/icons/star-black.svg'} alt='' width={16} height={16} key={starIndex}></Image>
-                ))}
-                {Array.from({ length: 5 - item.star }).map((_, starIndex) => (
-                  <Image src={'/images/icons/star-grey.svg'} alt='' width={16} height={16} key={starIndex}></Image>
-                ))}
-              </div>
-            </div>
-          ))}
-        </div>
+        <SkillCard skills={dev} />
       </div>
     </div>
   )
