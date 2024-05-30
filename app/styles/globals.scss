@@ -1,4 +1,7 @@
 @use './foundations/mixins.scss' as *;
+@use "./objects/components/image.scss";
+@use "./objects/components/text-link.scss";
+@use "./objects/components/skill-box.scss";
 
 * {
   box-sizing: border-box;
@@ -77,37 +80,5 @@ button {
   @include sp {
     width: 100%;
     padding-top: rem(50px);
-  }
-}
-
-.c-text-link {
-  background: linear-gradient(currentColor, currentColor) 0 100%/0 1px no-repeat;
-  transition: background .5s ease;
-  will-change: transition;
-  line-height: 1.5;
-  @media (hover) {
-    &:hover {
-      background-size: 100% 1px;
-    }
-    button:hover &,
-    a:hover & {
-      background-size: 100% 1px;
-    }
-  }
-}
-
-.c-image {
-  figure {
-    overflow: hidden;
-  }
-  img {
-    transition: all 1s ease;
-  }
-  @media (hover) {
-    &:hover {
-      img {
-        transform: scale(1.2, 1.2);
-      }
-    }
   }
 }
